@@ -1,0 +1,5 @@
+[
+	{"en": "The proceedings are reported in the language in which they were spoken in the committee", "cy": "Cofnodir y trafodion yn yr iaith y llefarwyd hwy ynddi yn y pwyllgor", "negative": 0.0, "positive": 0.0, "neutral": 0.0, "score": 0.0},
+	{"en": "In addition, a transcription of the simultaneous interpretation is included", "cy": "Yn ogystal, cynhwysir trawsgrifiad o\u2019r cyfieithu ar y pryd", "negative": 0.0, "positive": 0.0, "neutral": 0.0, "score": 0.0},
+	{"en": "Where contributors have supplied corrections to their evidence, these are noted in the transcript", "cy": "Lle mae cyfranwyr wedi darparu cywiriadau i\u2019w tystiolaeth, nodir y rheini yn y trawsgrifiad", "negative": 0.0, "positive": 0.0, "neutral": 0.0, "score": 0.0},
+]

@@ -1,0 +1,68 @@
+{
+  "en": {
+    "title": "SENTimental - Welsh / English",
+    "welsh": "Welsh",
+    "english": "English",
+    "loading": "Loading...",
+    "stronglyNegative": "Strongly negative",
+    "slightlyNegative": "Slightly negative",
+    "slightlyPositive": "Slightly positive",
+    "stronglyPositive": "Strongly positive",
+    "scoreProposition": "We think that this text is {0}, do you agree?",
+    "upVote": "Yes 👍",
+    "downVote": "👎 No",
+    "skip": "Skip this text",
+    "submit": "Submit",
+    "scorePrefix": "Score: ",
+
+    "sampleTextPrefix": "Consider the following text:",
+    "userScoreStatement": "Use the slider below to assign what sentiment this text has overall and press the Submit button, or select Skip to move to a new text.",
+
+    "positive": "Positive",
+    "negative": "Negative",
+    "neutral": "Neutral",
+
+    "missingStudyId": "No valid Study ID, responses will be stored as 'public'",
+    "studyIdPrefix": "Study ID: ",
+    "studyIdRequest": "Set a Study ID",
+    "studyIdChange": "Change your Study ID",
+    "loginTitle": "Hello!",
+    "loginBody": "If you have an identifier from the study, please enter it below.",
+    "loginButton": "Confirm",
+    "loginCancelButton": "Continue without a user ID",
+    "loginAlternative": "or..."
+  },
+  "cy": {
+    "title": "SENTimental - Cymraeg / Saesneg",
+    "welsh": "Cymraeg",
+    "english": "Saesneg",
+    "loading": "Llwytho...",
+    "stronglyNegative": "Negyddol iawn",
+    "slightlyNegative": "Ychydig yn negyddol",
+    "slightlyPositive": "Ychydig yn gadarnhaol",
+    "stronglyPositive": "Gadarnhaol iawn",
+    "scoreProposition": "Rydyn ni'n meddwl mai {0} yw'r testun hwn, ydych chi'n cytuno?",
+    "upVote": "Oes 👍",
+    "downVote": "👎 Nac ydw",
+    "skip": "Hepgor y testun hwn",
+    "submit": "Anfon",
+    "scorePrefix": "Sgôr: ",
+
+    "sampleTextPrefix": "Ystyriwch y testun isod:",
+    "userScoreStatement": "Defnyddiwch y llithrydd isod i aseinio pa deimlad cyffredinol sydd gan y testun hwn a gwasgwch y botwm Anfon, neu dewiswch Skip i symud i destun newydd.",
+
+    "positive": "Positif",
+    "negative": "Negatif",
+    "neutral": "Niwtral",
+
+    "missingStudyId": "Dim ID Astudio dilys, bydd ymatebion yn cael eu storio fel rhai 'cyhoeddus'",
+    "studyIdPrefix": "ID Astudio: ",
+    "studyIdRequest": "Gosod ID Astudio",
+    "studyIdChange": "Newid eich ID Astudio",
+    "loginTitle": "Helo!",
+    "loginBody": "Os oes gennych ddynodwr o'r astudiaeth, nodwch ef isod.",
+    "loginButton": "Cadarnhau",
+    "loginCancelButton": "Parhau heb ID defnyddiwr.",
+    "loginAlternative": "neu..."
+  }
+}
