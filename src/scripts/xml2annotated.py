@@ -8,6 +8,7 @@ import json
 import spacy
 import asent
 import re
+import sys
 
 def parseXML( xmlfile ):
   texts = []
@@ -38,8 +39,8 @@ def parseXML( xmlfile ):
       texts.append( utterance )
 
   except Exception as err:
-    print( f"[WW]\tUnable to parse {xmlfile} - note that some Senedd files are empty, so fail to parse as valid XML..." )
-    print( err  )
+    print( f"[WW]\tUnable to parse {xmlfile} - note that some Senedd files are empty, so fail to parse as valid XML...", flush=True )
+    print( err, flush=True )
 
   return texts
 
@@ -71,10 +72,16 @@ if __name__ == "__main__":
 
     bilingual.write( "[\n" )
 
-    for source in tqdm( glob( "xml/*.xml" ), desc="Extracting text...", leave=False, ncols=180 ):
+    for source in tqdm( glob( "raw/*.xml" ), desc="Extracting text...", leave=False, ncols=180 ):
+      sys.stdout.flush()
+      sys.stderr.flush()
+
       text = parseXML( source )
 
       for block in tqdm( text, desc="Block:            ", leave=False, ncols=180 ):
+        sys.stdout.flush()
+        sys.stderr.flush()
+
         if block['cy'] and block['en']:
 
           en_sentences = re.split( r'(\?|!|\.)', block['en'] )
@@ -88,6 +95,9 @@ if __name__ == "__main__":
             continue
 
           for idx, utterance in enumerate(tqdm(en_sentences, desc="Utterance:        ", leave=False, ncols=180 )):
+            sys.stdout.flush()
+            sys.stderr.flush()
+
             if len(utterance) < 10:
               continue
 
@@ -109,4 +119,4 @@ if __name__ == "__main__":
 
   #print( welsh )
 
-  print( f"Skipped {skipped_sentences} sentences :(" )
+  print( f"Skipped {skipped_sentences} sentences :(", flush=True  )
