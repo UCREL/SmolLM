@@ -2,3 +2,7 @@ beautifulsoup4
 tqdm
 spacy-curated-transformers
 asent
+evaluate
+huggingface_hub[hf_xet]
+transformers[torch]
+scikit-learn

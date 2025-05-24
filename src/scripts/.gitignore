@@ -1,2 +1,6 @@
 xml
+raw
 venv
+*.tsv
+bilingual.json
+snapshot.json
