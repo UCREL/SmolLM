@@ -10,7 +10,8 @@ import json
 from tqdm import tqdm
 print( f"CUDA Available = {torch.cuda.is_available()}" )
 
-DEFAULT_MODEL = "cy-sentiment-finetune-5000"
+#DEFAULT_MODEL = "cy-sentiment-finetune-5000"
+DEFAULT_MODEL = "cy-sentiment-finetune-1000000"
 SEED=int(time.time() * 1000)
 
 # Define the features
