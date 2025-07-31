@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+## Scrape transcripts from the Senedd website
+##
+## This script scrapes the Senedd website for bilingual transcripts of meetings.
+##
+## USE THIS SPARINGLY! The Senedd website is not designed for scraping, and this script
+## may put undue load on their servers. Use responsibly and consider caching results.
+
+
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from pathlib import Path
@@ -8,12 +16,26 @@ import json
 import time
 import re
 import sys
-
+import time
 
 DOMAIN = "https://record.senedd.wales"
 ROOT_LIST_URL = f"{DOMAIN}/XMLExport/SeeMore"
 
 TRANSCRIPTS = []
+
+print( "This script scrapes the Senedd website for bilingual transcripts of meetings." )
+print( "" )
+print( "USE THIS SPARINGLY! The Senedd website is not designed for scraping, and this script" )
+print( "may put undue load on their servers. Use responsibly and consider caching results." )
+print( "" )
+print( "Now pausing for 15 seconds to allow you to read this message and stop this process (ctrl+c)..." )
+print( "" )
+
+for i in range(15, 0, -1):
+  print( f"  - {i} seconds remaining   \r", flush=True, end="" )
+  time.sleep(1)
+print( "  - Ok!                       " )
+print( "", flush=True )
 
 print( "=== BUILDING DOWNLOAD LIST ===" )
 hasMore = True
@@ -40,14 +62,13 @@ while( hasMore ):
       page = page + 1
 
 print( "=== LOGGING SOURCES ===", flush=True )
+Path( "raw" ).mkdir( parents=True, exist_ok=True )
 with open( 'raw/sources.txt', 'w' ) as sources:
   for ts in TRANSCRIPTS:
     sources.write( f"{ts}\n" )
   sources.flush()
 
 print( "=== DOWNLOADING TRANSCRIPTS ===", flush=True )
-
-Path( "raw" ).mkdir( parents=True, exist_ok=True )
 meetingPattern = re.compile( r"^.+meetingID=(\d+).*$" )
 for url in tqdm( TRANSCRIPTS, desc="Downloading..." ):
   sys.stdout.flush()
